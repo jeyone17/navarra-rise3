@@ -240,7 +240,7 @@ class CartController extends Controller
     }
 
     //Cancel Order
-    public function cancelOrder(Order $order)
+    public function cancel(Order $order)
     {
         // Update the order status to "Cancelled"
         $order->update([
