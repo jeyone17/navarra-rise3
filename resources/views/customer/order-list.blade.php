@@ -78,26 +78,34 @@
                         <tbody>
                             @forelse ($orders as $order)
                             <tr>
-                                <td>{{ $order->id }}</td>
+                                <td>{{ $order->order_id }}</td>
                                 <td>{{ $order->tracking_no }}</td>
                                 <td>{{ $order->delivery_date }}</td>
                                 <td>{{ $order->payment_status }}</td>
                                 <td>{{ $order->order_status }}</td>
                                 <td>
-                                    <form action="{{ route('order.cancel', $order->id) }}" method="POST" onsubmit="confirmCancellation(event, this)">
+                                    {{-- <button type="submit" class="btn btn-danger mx-2">Cancel</button> --}}
+                                    {{-- <button type="submit" class="btn btn-success mx-2">View</button>
+                                    <button type="submit" class="btn btn-success mx-2">Confirm Delivery </button> --}}
+
+                                    {{-- Cancel Button --}}
+                                    <form action="{{ route('order.cancel', ['order' => $order->order_id]) }}" method="POST" onsubmit="confirmCancellation(event, this)">
                                         @csrf
                                         @method('PATCH')
                                         <button type="submit" class="btn btn-danger mx-2">Cancel</button>
                                     </form>
 
+                                    {{-- View Button --}}
                                     <a href="{{ route('customer.order-details', $order->id) }}" class="btn btn-success mx-2">View</a>
 
+                                    {{-- Delivered Button --}}
                                     @if ($order->order_status !== 'Delivered')
                                         <form action="{{ route('order.confirm', $order->id) }}" method="POST">
                                             @csrf
                                             <button type="submit" class="btn btn-success mx-2">Confirm Delivery</button>
                                         </form>
                                     @endif
+
                                 </td>
                             </tr>
                             @empty
