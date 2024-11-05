@@ -235,7 +235,7 @@ class CartController extends Controller
     //View Order Details
     public function orderDetails(Order $order)
     {
-        $orderDetails = $order->orderDetails; // Assuming a relationship exists between Order and OrderDetails models
+        $orderDetails = $order->orderDetails; 
         return view('customer.customer-order-details', compact('order', 'orderDetails'));
     }
 

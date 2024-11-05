@@ -96,7 +96,7 @@
                                     </form>
 
                                     <!-- View Button -->
-                                    {{-- <a href="{{ route('customer.order-details', $order->id) }}" class="btn btn-success mx-2">View</a> --}}
+                                    <!-- <a href="{{ route('customer.order-details', $order->id) }}" class="btn btn-success mx-2">View</a> -->
                                     <a href="{{ route('customer.order-details', ['order' => $order->order_id]) }}" class="btn btn-success mx-2">View</a>
 
                                     <!-- Delivered Button -->

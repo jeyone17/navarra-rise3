@@ -22,7 +22,8 @@ class Order extends Model
 
     public function orderDetails()
     {
-        return $this->hasMany(OrderDetails::class);
+        // return $this->hasMany(OrderDetails::class);
+        return $this->hasMany(OrderDetails::class, 'order_id');
     }
 
     // Define a scope to filter orders by status
