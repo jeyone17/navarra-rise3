@@ -5,9 +5,6 @@
 
 @section('contents')
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSV1H3B9U0Ze4jyL05cJliB9CR7Zk14d4&libraries=places">
-    </script>
-
     <section class="section">
         <div class="container">
             <div class="card shadow-sm">
@@ -179,8 +176,11 @@
 @endsection
 
 @section('scripts')
-<script>
 
+<!-- Google Maps API inclusion -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSV1H3B9U0Ze4jyL05cJliB9CR7Zk14d4&libraries=places"></script>
+
+<script>
     // Initialize Google Map
     function initMap() {
         const map = new google.maps.Map(document.getElementById('map'), {

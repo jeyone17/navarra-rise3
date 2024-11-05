@@ -33,18 +33,18 @@
     <link href="{{ asset('admin_assets/assets/css/style.css') }}" rel="stylesheet">
 
     <!-- Leaflet CSS -->
-    {{-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-        crossorigin=""/> --}}
+        crossorigin=""/> -->
 
     <!-- Leaflet JS -->
-    {{-- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    <!-- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-        crossorigin=""></script> --}}
+        crossorigin=""></script> -->
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSV1H3B9U0Ze4jyL05cJliB9CR7Zk14d4&libraries=places">
-    </script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSV1H3B9U0Ze4jyL05cJliB9CR7Zk14d4&libraries=places"></script> -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
     <style>
         body {
             font-family: Arial, sans-serif;
