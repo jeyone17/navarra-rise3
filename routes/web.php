@@ -160,10 +160,10 @@ Route::prefix('customer')->group(function () {
     Route::patch('/order/{order}/cancel', [CartController::class, 'cancel'])->name('order.cancel');
 
     //History
-    Route::get('/order-history-details/{id}', [OrderHistoryController::class, 'showOrderDetails'])->name('order.history.details');
+    Route::get('/order-history-details/{order}', [OrderHistoryController::class, 'showOrderDetails'])->name('order.history.details');
     Route::get('/history', [OrderHistoryController::class, 'index'])->name('customer.history.index');
     Route::get('/history', [OrderHistoryController::class, 'history'])->name('customer.history.history');
-    Route::delete('/history/{id}', [OrderHistoryController::class, 'destroy'])->name('customer.history.destroy');
+    Route::delete('/history/{order}', [OrderHistoryController::class, 'destroy'])->name('customer.history.destroy');
 
     //Profile
     Route::get('/customer-profile', [CustomerProfileController::class, 'index'])->name('customer-profile');
