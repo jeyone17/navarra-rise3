@@ -12,7 +12,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Order History Details</h5>
 
-                        <a href="#" class="btn btn-success mx-2">Download</a>
+                        <a href="{{ route('order.downloadInvoice', $order->order_id) }}" class="btn btn-success mx-2">Download</a>
                         <a href="{{ route('history') }}" class="btn btn-success mx-2">Back</a>
 
                         <!-- Table with stripped rows -->
@@ -69,14 +69,14 @@
                             <h5>5800</h5>
                         </div>
 
-                        {{-- <form action="{{ route('cart.placeOrder') }}" method="POST">
+                        <!-- <form action="{{ route('cart.placeOrder') }}" method="POST">
                             @csrf
                             <div class="text-end">
                                 <h5>Total: ${{ number_format($totalPrice, 2) }}</h5>
                                 <a href="{{ route('cart') }}" class="btn btn-success mx-2">Edit Order</a>
                                 <button type="submit" class="btn btn-success mx-2">Place Order</button>
                             </div>
-                        </form> --}}
+                        </form> -->
 
                     </div>
                 </div>

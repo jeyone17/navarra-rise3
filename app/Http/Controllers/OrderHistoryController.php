@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Order;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class OrderHistoryController extends Controller
 {
@@ -41,6 +42,12 @@ class OrderHistoryController extends Controller
     {
         $orders = Order::where('order_status', 'Cancelled')->get();
         return view('customer.history', compact('orders'));
+    }
+
+    public function downloadInvoice(Order $order)
+    {
+        $pdf = Pdf::loadView('invoices.order_invoice', compact('order'));
+        return $pdf->download('invoice_' . $order->id . '.pdf');
     }
 
 

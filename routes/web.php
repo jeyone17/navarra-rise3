@@ -164,7 +164,8 @@ Route::prefix('customer')->group(function () {
     Route::get('/history', [OrderHistoryController::class, 'index'])->name('customer.history.index');
     Route::get('/history', [OrderHistoryController::class, 'history'])->name('customer.history.history');
     Route::delete('/history/{order}', [OrderHistoryController::class, 'destroy'])->name('customer.history.destroy');
-
+    Route::get('/order/{order}/download-invoice', [OrderHistoryController::class, 'downloadInvoice'])->name('order.downloadInvoice');
+    
     //Profile
     Route::get('/customer-profile', [CustomerProfileController::class, 'index'])->name('customer-profile');
     Route::get('/customer-account-settings', [CustomerAccountSettingController::class, 'index'])->name('customer-account-settings');
