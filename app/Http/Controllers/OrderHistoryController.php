@@ -6,6 +6,7 @@ use App\Models\Order;
 use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade\Pdf;
 
+
 class OrderHistoryController extends Controller
 {
     public function index()
@@ -46,9 +47,10 @@ class OrderHistoryController extends Controller
 
     public function downloadInvoice(Order $order)
     {
-        $pdf = Pdf::loadView('invoices.order_invoice', compact('order'));
+        $pdf = Pdf::loadView('customer.order-invoice', compact('order'));
         return $pdf->download('invoice_' . $order->id . '.pdf');
+
+        // $pdf = $pdf->loadView('invoices.order_invoice', compact('order'));
+        // return $pdf->download('invoice_' . $order->id . '.pdf');
     }
-
-
 }

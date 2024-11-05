@@ -2,6 +2,8 @@
 
 use App\Livewire\Forms\LoginForm;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
 
 use function Livewire\Volt\form;
 use function Livewire\Volt\layout;

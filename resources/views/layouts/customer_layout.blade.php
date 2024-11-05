@@ -181,8 +181,7 @@
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">
                             <h6>{{ auth()->user()->name }}</h6>
-                            <span class="d-none d-lg-block text-capitalize"><?php $user = Auth::user();
-                            echo $user['first_name'] . ' ' . $user['last_name']; ?></span>
+                            <span class="d-none d-lg-block text-capitalize">{{ auth()->user()->first_name . ' ' . auth()->user()->last_name }}</span>
                         </li>
                         <li>
                             <hr class="dropdown-divider">
