@@ -20,7 +20,7 @@ return new class extends Migration
         // });
 
         Schema::create('orders', function (Blueprint $table) {
-            $table->id();
+            $table->id(order_id);
             $table->string('tracking_no');
             $table->date('delivery_date');
             $table->string('payment_status');

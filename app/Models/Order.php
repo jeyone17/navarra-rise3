@@ -18,6 +18,8 @@ class Order extends Model
         'order_status',
     ];
 
+    protected $primaryKey = 'order_id';
+
     public function orderDetails()
     {
         return $this->hasMany(OrderDetails::class);

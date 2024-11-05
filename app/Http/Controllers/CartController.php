@@ -242,6 +242,8 @@ class CartController extends Controller
     //Cancel Order
     public function cancel(Order $order)
     {
+        $order = Order::findOrFail($order->order_id);
+
         // Update the order status to "Cancelled"
         $order->update([
             'order_status' => 'Cancelled',

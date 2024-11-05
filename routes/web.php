@@ -159,7 +159,6 @@ Route::prefix('customer')->group(function () {
     Route::get('customer/customer-order-details/{order}', [CartController::class, 'orderDetails'])->name('customer.order-details');
     Route::patch('/order/{order}/cancel', [CartController::class, 'cancel'])->name('order.cancel');
 
-
     //History
     Route::get('/order-history-details/{id}', [OrderHistoryController::class, 'showOrderDetails'])->name('order.history.details');
     Route::get('/history', [OrderHistoryController::class, 'index'])->name('customer.history.index');
